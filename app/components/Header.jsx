@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { Section } from "./Section";
 import { GithubIcon } from "./icons/GithubIcon";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
+import { XIcon } from "./icons/XIcon";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -44,6 +45,13 @@ export const Header = () => {
             className={cn(buttonVariants({ variant: "outline" }, "size-7 p-0"))}
           >
             <GithubIcon size={20} className="text-foreground" />
+          </Link>
+          <Link
+            href="https://x.com/ismailouzz"
+            target="_blank"
+            className={cn(buttonVariants({ variant: "outline" }, "size-7 p-0"))}
+          >
+            <XIcon size={20} className="text-foreground" />
           </Link>
           <Link
             href="https://linkedin.com/in/ismailouzz"

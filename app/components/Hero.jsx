@@ -1,8 +1,15 @@
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Section } from "./Section";
 import { DownloadIcon } from "./icons/DownloadIcon";
+import { EyeIcon } from "./icons/EyeIcon";
 
 export const Hero = () => {
   return (
@@ -17,19 +24,40 @@ export const Hero = () => {
           building applications, proficient in various programming languages and
           experienced with both relational and non-relational databases.
         </p>
-        <Link
-          href="/resume.pdf"
-          target="_blank"
-          className={cn(
-            buttonVariants(
-              { variant: "outline", size: "lg" },
-              "flex items-center gap-2"
-            )
-          )}
-        >
-          <span className="uppercase">Download CV</span>
-          <DownloadIcon size={24} className="ml-5" />
-        </Link>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="outline"
+              size="lg"
+              className="flex items-center gap-2"
+            >
+              <span className="uppercase">Generate CV</span>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem>
+              <Link
+                href="https://resume.iouzzine.me"
+                target="_blank"
+                className="flex items-center justify-between gap-2 w-full"
+              >
+                <span className="uppercase">Online</span>
+                <EyeIcon size={24} />
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <Link
+                href="https://resume.iouzzine.me/resume.pdf"
+                target="_blank"
+                className="flex items-center justify-between gap-2 w-full"
+              >
+                <span className="uppercase">PDF</span>
+                <DownloadIcon size={24} />
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
       <div className="flex-1 max-md:py-5">
         <img

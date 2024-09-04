@@ -6,9 +6,11 @@ import { DownloadIcon } from "./icons/DownloadIcon";
 
 export const Hero = () => {
   return (
-    <Section className="flex max-md:flex-col items-start">
-      <div className="flex-[2] px-5">
-        <h2 className="font-caption text-5xl">Ismail Ouzzine</h2>
+    <Section className="flex max-md:flex-col max-md:items-center max-md:justify-center items-start">
+      <div className="flex-[2] px-5 max-md:flex max-md:flex-col max-md:items-center max-md:justify-center max-md:text-center">
+        <h2 className="font-caption text-5xl max-md:text-4xl">
+          Ismail Ouzzine
+        </h2>
         <h3>Software developer</h3>
         <p className="mb-3">
           As a Full Stack Developer, I bring a versatile and agile approach to
@@ -21,15 +23,12 @@ export const Hero = () => {
           className={cn(
             buttonVariants(
               { variant: "outline", size: "lg" },
-              "flex items-center gap-2 group"
+              "flex items-center gap-2"
             )
           )}
         >
           <span className="uppercase">Download CV</span>
-          <DownloadIcon
-            size={24}
-            className="ml-5 group-hover:scale-110 group-hover:text-accent-foreground transition-all duration-400"
-          />
+          <DownloadIcon size={24} className="ml-5" />
         </Link>
       </div>
       <div className="flex-1 max-md:py-5">

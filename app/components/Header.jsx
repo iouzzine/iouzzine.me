@@ -29,9 +29,9 @@ export const Header = () => {
     >
       <Section className="flex items-baseline">
         <Link href="/">
-          <h1 className="text-2xl font-bold text-primary hover:text-accent group transition-colors duration-500">
+          <h1 className="text-2xl font-bold text-primary hover:text-primary-foreground group transition-colors duration-500">
             iouzzine
-            <span className="text-accent group-hover:text-primary transition-colors duration-400">
+            <span className="text-primary-foreground group-hover:text-primary transition-colors duration-400">
               .me
             </span>
           </h1>

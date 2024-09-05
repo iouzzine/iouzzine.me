@@ -59,7 +59,7 @@ export const Hero = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="flex-1 max-md:m-auto ml-auto">
+      <div className="flex-1 max-md:m-auto ml-auto max-md:pt-4">
         <img
           src="https://avatars.githubusercontent.com/u/123068616"
           className="w-full h-auto max-w-xs max-md:w-56 rounded-full"

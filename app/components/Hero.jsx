@@ -13,13 +13,13 @@ import { EyeIcon } from "./icons/EyeIcon";
 
 export const Hero = () => {
   return (
-    <Section className="flex max-md:flex-col max-md:items-center max-md:justify-center items-start">
-      <div className="flex-[2] px-5 max-md:flex max-md:flex-col max-md:items-center max-md:justify-center">
+    <Section className="flex max-md:flex-col items-start">
+      <div className="flex-[2] flex flex-col gap-2">
         <h2 className="font-caption text-primary text-5xl max-md:text-4xl">
           Ismail Ouzzine
         </h2>
         <h3 className="font-caption text-3xl">Software developer</h3>
-        <p className="mb-3">
+        <p className="pr-6 text-justify">
           As a Full Stack Developer, I bring a versatile and agile approach to
           building applications, proficient in various programming languages and
           experienced with both relational and non-relational databases.
@@ -59,7 +59,7 @@ export const Hero = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="flex-1 max-md:m-auto ml-auto max-md:py-5">
+      <div className="flex-1 max-md:m-auto ml-auto">
         <img
           src="https://avatars.githubusercontent.com/u/123068616"
           className="w-full h-auto max-w-xs max-md:w-56 rounded-full"

@@ -11,7 +11,7 @@ export const Contact = () => {
       </h2>
       <div className="flex max-md:flex-col w-full gap-4">
         <ContactCard
-          name="contact@iouzzine.me"
+          name="@iouzzine.me"
           image="https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI"
           url="mailto:contact@iouzzine.me"
         />
@@ -21,7 +21,7 @@ export const Contact = () => {
           url="https://x.com/ismailouzz"
         />
         <ContactCard
-          name="Ismail Ouzzine"
+          name="iouzzine"
           image="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
           url="https://linkedin.com/in/ismailouzz"
         />

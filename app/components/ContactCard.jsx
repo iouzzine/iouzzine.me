@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const ContactCard = ({ image, name, url }) => {
   return (
-    <Link href={url} target="_blank">
+    <Link href={url} target="_blank" className="w-full flex-1">
       <Card className="flex items-center gap-4 p-3 bg-accent/10 hover:bg-accent/30 transition-colors group">
-        <div className="relative">
+        <div className="relative w-10 h-10">
           <img
             src="https://avatars.githubusercontent.com/u/123068616"
             alt={name}
@@ -18,7 +18,7 @@ export const ContactCard = ({ image, name, url }) => {
             className="w-4 h-4 absolute -bottom-1 -right-1 rounded-full object-contain"
           />
         </div>
-        <div className="mr-auto">
+        <div className="flex-1">
           <p className="text-lg font-semibold">{name}</p>
         </div>
         <ArrowUpRight

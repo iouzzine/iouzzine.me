@@ -41,7 +41,7 @@ export const Status = () => {
             url="https://x.com/ismailouzz"
           />
           <ContactCard
-            name="Ismail Ouzzine"
+            name="iouzzine"
             image="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
             url="https://linkedin.com/in/ismailouzz"
           />

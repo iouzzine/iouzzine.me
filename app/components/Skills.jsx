@@ -37,7 +37,7 @@ export const Skills = () => {
           <NodeLogo size={42} />
           <h3 className="text-2xl font-semibold tracking-tight">Node.js</h3>
           <p className="text-sm text-muted-foreground">
-            I also use <Code>Node.js</Code> for back-end development."
+            I also use <Code>Node.js</Code> for back-end development.
           </p>
         </div>
       </div>

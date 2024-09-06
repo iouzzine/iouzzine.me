@@ -36,11 +36,6 @@ export const Status = () => {
         <Card className="p-4 flex-1 flex flex-col gap-2">
           <p className="text-lg text-muted-foreground">Contact me</p>
           <ContactCard
-            name="Email"
-            image="https://cdn.pixabay.com/photo/2016/06/13/17/30/mail-1454731_640.png"
-            url="mailto:contact@iouzzine.me"
-          />
-          <ContactCard
             name="@ismailouzz"
             image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwYG4azEl9wGw5TJHa2ct7hKic_VsexIUDlQ&s"
             url="https://x.com/ismailouzz"

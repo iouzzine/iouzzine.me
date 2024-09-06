@@ -1,3 +1,4 @@
+import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Skills } from "./components/Skills";
@@ -14,6 +15,9 @@ export default function Home() {
       <Status />
       <Spacing size="md" />
       <Skills />
+      <Spacing size="md" />
+      <Contact />
+      <Spacing size="md" />
     </main>
   );
 }

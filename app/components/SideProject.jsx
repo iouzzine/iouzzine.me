@@ -5,7 +5,7 @@ export const SideProject = ({ Logo, title, description, url }) => {
     <Link
       href={url}
       target="_blank"
-      className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-5 max-md:p-1 rounded"
+      className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-[0.78rem] max-md:pd-1 rounded"
     >
       <span className="bg-accent text-accent-foreground p-3 rounded-sm">
         <Logo />

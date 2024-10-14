@@ -2,6 +2,7 @@ import { GeistSans } from "geist/font/sans";
 import { Anek_Telugu } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
 const AnekTelugu = Anek_Telugu({
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         )}
       >
         {children}
+        <Toaster />
         <SpeedInsights />
       </body>
     </html>

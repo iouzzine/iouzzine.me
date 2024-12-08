@@ -1,3 +1,4 @@
+import { ThemeProvider } from "next-themes";
 import { GeistSans } from "geist/font/sans";
 import { Anek_Telugu } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -25,7 +26,9 @@ export default function RootLayout({ children }) {
           "font-sans h-full bg-background text-foreground"
         )}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
         <Toaster />
         <SpeedInsights />
       </body>

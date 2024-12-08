@@ -1,52 +1,78 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { SIDE_PROJECTS, WORKS } from "../constants/data";
 import { Section } from "./Section";
-import { ContactCard } from "./ContactCard";
 import { Work } from "./Work";
 import { SideProject } from "./SideProject";
 
 export const Status = () => {
   return (
-    <Section className="flex max-md:flex-col items-start gap-4">
-      <div className="flex-[3] w-full">
-        <Card className="w-full p-4 flex flex-col gap-2">
-          <p className="text-lg text-muted-foreground">Side, fun projects.</p>
-          <div className="flex flex-col gap-4">
+    <Section className="grid lg:grid-cols-2 gap-6">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="space-y-6"
+      >
+        <Card className="p-6 bg-background/50 backdrop-blur-sm border-2 h-full">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-xl font-bold text-primary mb-6"
+          >
+            Side Projects
+          </motion.h2>
+          <div className="space-y-4">
             {SIDE_PROJECTS.map((project, index) => (
-              <SideProject
+              <motion.div
                 key={index}
-                Logo={project.logo}
-                title={project.title}
-                description={project.description}
-                url={project.url}
-              />
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <SideProject
+                  key={index}
+                  Logo={project.logo}
+                  title={project.title}
+                  description={project.description}
+                  url={project.url}
+                />
+              </motion.div>
             ))}
           </div>
         </Card>
-      </div>
-      <div className="flex-[2] w-full flex flex-col gap-4">
-        <Card className="p-4 flex-1">
-          <p className="text-lg text-muted-foreground">Work</p>
-          <div className="flex flex-col gap-4">
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="space-y-6 flex flex-col"
+      >
+        <Card className="p-6 bg-background/50 backdrop-blur-sm border-2">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-xl font-bold text-primary mb-6"
+          >
+            Work Experience
+          </motion.h2>
+          <div className="space-y-4">
             {WORKS.map((work, index) => (
-              <Work key={index} {...work} />
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Work {...work} />
+              </motion.div>
             ))}
           </div>
         </Card>
-        <Card className="p-4 flex-1 flex flex-col gap-2">
-          <p className="text-lg text-muted-foreground">Contact me</p>
-          <ContactCard
-            name="@ismailouzz"
-            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwYG4azEl9wGw5TJHa2ct7hKic_VsexIUDlQ&s"
-            url="https://x.com/ismailouzz"
-          />
-          <ContactCard
-            name="iouzzine"
-            image="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-            url="https://linkedin.com/in/ismailouzz"
-          />
-        </Card>
-      </div>
+      </motion.div>
     </Section>
   );
 };

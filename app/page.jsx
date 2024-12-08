@@ -10,15 +10,15 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <Spacing size="md" />
+      <Spacing />
       <Hero />
-      <Spacing size="md" />
+      <Spacing />
       <Status />
-      <Spacing size="md" />
+      <Spacing />
       <Skills />
-      <Spacing size="md" />
+      <Spacing />
       <Contact />
-      <Spacing size="md" />
+      <Spacing />
       <Footer />
     </main>
   );

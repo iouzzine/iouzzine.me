@@ -62,12 +62,12 @@ const Contact = () => {
               </Link>
 
               <Link
-                href="https://github.com/isouzz"
+                href="https://github.com/iouzzine"
                 target="_blank"
                 className="flex items-center gap-4 p-4 bg-gradient-to-tr from-primary/10 via-secondary/10 to-primary/10 rounded-xl hover:scale-105 transition-transform"
               >
                 <Github className="text-primary" />
-                <span>github.com/isouzz</span>
+                <span>github.com/iouzzine</span>
               </Link>
 
               <Link

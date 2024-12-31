@@ -1,7 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import { GeistSans } from "geist/font/sans";
 import { Anek_Telugu } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import { Toaster } from "sonner";
@@ -28,6 +27,14 @@ export default function RootLayout({
       style={{ scrollBehavior: "smooth" }}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          async
+          defer
+          src="https://monitoring.iouzzine.me/tracker.js"
+          data-website-id="cm5ce9r600001i1co7zpb9ywt"
+        ></script>
+      </head>
       <body
         className={cn(
           GeistSans.variable,
@@ -38,7 +45,6 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
-        <SpeedInsights />
         <Toaster position="top-right" richColors />
       </body>
     </html>

@@ -17,23 +17,12 @@ const Skills = () => {
     {
       name: 'Frontend',
       icon: <Layout className="h-5 w-5" />,
-      skills: [
-        'HTML',
-        'CSS',
-        'Javascript',
-        'React',
-        'Electron',
-        'Angular',
-        'VueJS',
-        'Next.js',
-        'Nuxt.js',
-        'Flutter',
-      ],
+      skills: ['HTML', 'CSS', 'Javascript', 'React', 'Electron', 'Next.js'],
     },
     {
       name: 'Backend',
       icon: <Server className="h-5 w-5" />,
-      skills: ['Node.js', 'NestJS', 'Java', 'Scala', 'PHP', 'Laravel', 'Symfony', 'Python', 'C'],
+      skills: ['Node.js', 'NestJS', 'Java', 'Scala', 'PHP', 'Laravel', 'Symfony'],
     },
     {
       name: 'Database',
@@ -43,7 +32,7 @@ const Skills = () => {
     {
       name: 'DevOps & Tools',
       icon: <Terminal className="h-5 w-5" />,
-      skills: ['Git', 'Docker', 'Cypress', 'Logstash', 'ElasticSearch', 'Unix'],
+      skills: ['Git', 'Docker', 'ElasticSearch', 'Unix'],
     },
   ];
 

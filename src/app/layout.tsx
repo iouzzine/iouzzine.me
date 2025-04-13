@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import { Geist_Mono } from 'next/font/google';
 import './globals.css';
+import Footer from './components/footer';
 import ScrollIndicator from './components/scroll-indicator';
 import ScrollToTop from './components/scroll-to-top';
 
@@ -38,6 +39,7 @@ export default function RootLayout({
         <ScrollToTop />
         <ScrollIndicator />
         {children}
+        <Footer />
         <SpeedInsights />
       </body>
     </html>

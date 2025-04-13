@@ -24,8 +24,31 @@ const About = () => {
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950" />
       <div className="absolute inset-0 -z-10 bg-[url('/grid-pattern.svg')] bg-center opacity-15" />
 
-      <div className="bg-primary-500/10 absolute top-1/4 left-1/4 -z-10 h-96 w-96 rounded-full blur-[150px]" />
-      <div className="absolute right-1/4 bottom-1/3 -z-10 h-96 w-96 rounded-full bg-blue-500/10 blur-[150px]" />
+      <motion.div
+        className="bg-primary-500/10 absolute top-1/4 left-1/4 -z-10 h-96 w-96 rounded-full blur-[150px]"
+        animate={{
+          opacity: [0.5, 0.7, 0.5],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
+      <motion.div
+        className="absolute right-1/4 bottom-1/3 -z-10 h-96 w-96 rounded-full bg-blue-500/10 blur-[150px]"
+        animate={{
+          opacity: [0.5, 0.8, 0.5],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 1,
+        }}
+      />
 
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
@@ -36,12 +59,12 @@ const About = () => {
             transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
           >
             <div
-              className="relative mx-auto hidden sm:block"
+              className="relative mx-auto"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               <motion.div
-                className="relative mx-auto aspect-square w-80 overflow-hidden rounded-full bg-gradient-to-b from-neutral-800 to-neutral-900 p-3 shadow-2xl md:w-96"
+                className="relative mx-auto aspect-square w-64 overflow-hidden rounded-full bg-gradient-to-b from-neutral-800 to-neutral-900 p-3 shadow-2xl sm:w-80 md:w-96"
                 initial={{ borderRadius: '100%' }}
                 whileHover={{
                   boxShadow: '0 25px 50px -12px rgba(79, 70, 229, 0.35)',
@@ -78,13 +101,13 @@ const About = () => {
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-6 left-1/2 -translate-x-1/2 transform rounded-xl border border-neutral-800/50 bg-neutral-900/90 px-5 py-3 shadow-xl backdrop-blur-md"
+                className="absolute -bottom-6 left-1/2 -translate-x-1/2 transform rounded-xl border border-neutral-800/50 bg-neutral-900/90 px-4 py-2 shadow-xl backdrop-blur-md sm:px-5 sm:py-3"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
                 whileHover={{ y: -2, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.2)' }}
               >
-                <div className="flex flex-wrap justify-center gap-2">
+                <div className="flex flex-wrap justify-center gap-1 sm:gap-2">
                   {['TypeScript', 'React', 'Next.js', 'Node.js', 'Scala', 'Docker'].map(
                     (skill, index) => (
                       <motion.span
@@ -93,7 +116,7 @@ const About = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
                         whileHover={{ scale: 1.08, transition: { duration: 0.2 } }}
-                        className="hover:border-primary-500/40 hover:bg-primary-500/10 hover:text-primary-300 inline-flex items-center rounded-md border border-neutral-700/50 bg-neutral-800/80 px-2.5 py-0.5 text-xs font-medium text-neutral-200 shadow-inner transition-all duration-200"
+                        className="hover:border-primary-500/40 hover:bg-primary-500/10 hover:text-primary-300 inline-flex items-center rounded-md border border-neutral-700/50 bg-neutral-800/80 px-2 py-0.5 text-xs font-medium text-neutral-200 shadow-inner transition-all duration-200"
                       >
                         {skill}
                       </motion.span>
@@ -125,7 +148,7 @@ const About = () => {
               </motion.div>
 
               <motion.h1
-                className="mt-6 bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-4xl font-bold tracking-tight text-transparent md:text-5xl lg:text-6xl"
+                className="mt-6 bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl md:text-5xl lg:text-6xl"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.4 }}
@@ -137,7 +160,7 @@ const About = () => {
               </motion.h1>
 
               <motion.div
-                className="mt-8 space-y-5 text-lg text-neutral-300"
+                className="mt-8 space-y-5 text-base text-neutral-300 sm:text-lg"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.5 }}
@@ -156,7 +179,7 @@ const About = () => {
               </motion.div>
 
               <motion.div
-                className="my-8 flex flex-wrap gap-4"
+                className="my-6 flex flex-wrap gap-3 sm:my-8 sm:gap-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
@@ -166,13 +189,16 @@ const About = () => {
                   { number: '30+', label: 'Projects' },
                   { number: '15+', label: 'Clients' },
                 ].map((stat, index) => (
-                  <div key={index} className="group relative mr-8 flex items-center space-x-3">
-                    <div className="group-hover:from-primary-600/20 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-900 shadow-inner transition-all duration-300 group-hover:bg-gradient-to-br group-hover:to-blue-600/20">
-                      <span className="from-primary-400 bg-gradient-to-r to-blue-400 bg-clip-text text-2xl font-bold text-transparent">
+                  <div
+                    key={index}
+                    className="group relative mr-6 flex items-center space-x-2 sm:mr-8 sm:space-x-3"
+                  >
+                    <div className="group-hover:from-primary-600/20 flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 shadow-inner transition-all duration-300 group-hover:bg-gradient-to-br group-hover:to-blue-600/20 sm:h-12 sm:w-12">
+                      <span className="from-primary-400 bg-gradient-to-r to-blue-400 bg-clip-text text-xl font-bold text-transparent sm:text-2xl">
                         {stat.number}
                       </span>
                     </div>
-                    <span className="text-sm font-medium text-neutral-400 transition-colors duration-300 group-hover:text-neutral-300">
+                    <span className="text-xs font-medium text-neutral-400 transition-colors duration-300 group-hover:text-neutral-300 sm:text-sm">
                       {stat.label}
                     </span>
                   </div>
@@ -180,13 +206,13 @@ const About = () => {
               </motion.div>
 
               <motion.div
-                className="flex flex-wrap gap-4"
+                className="flex flex-col flex-wrap gap-3 sm:flex-row sm:gap-4"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.7 }}
               >
                 <motion.button
-                  className="group from-primary-600 shadow-primary-900/20 hover:shadow-primary-900/30 relative cursor-pointer overflow-hidden rounded-full bg-gradient-to-r to-blue-600 px-7 py-3.5 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:shadow-xl"
+                  className="group from-primary-600 shadow-primary-900/20 hover:shadow-primary-900/30 relative cursor-pointer overflow-hidden rounded-full bg-gradient-to-r to-blue-600 px-6 py-3 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:shadow-xl sm:px-7 sm:py-3.5"
                   onClick={() => scrollToNextSection('contact')}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -202,7 +228,7 @@ const About = () => {
                 </motion.button>
 
                 <motion.button
-                  className="group hover:border-primary-500/50 relative cursor-pointer overflow-hidden rounded-full border border-neutral-700/50 bg-neutral-800/20 px-7 py-3.5 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-neutral-800/50"
+                  className="group hover:border-primary-500/50 relative cursor-pointer overflow-hidden rounded-full border border-neutral-700/50 bg-neutral-800/20 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-neutral-800/50 sm:px-7 sm:py-3.5"
                   onClick={() => {
                     const link = document.createElement('a');
                     link.href = 'https://resume.iouzzine.me/resume.pdf';

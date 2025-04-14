@@ -2,7 +2,7 @@
 
 import cn from 'classnames';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, ArrowDown } from 'lucide-react';
+import { ArrowRight, Download, ArrowDown, FileText } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -227,29 +227,44 @@ const About = () => {
                   <span className="from-primary-500 absolute inset-0 -z-10 bg-gradient-to-r to-blue-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
                 </motion.button>
 
-                <motion.button
-                  className="group hover:border-primary-500/50 relative cursor-pointer overflow-hidden rounded-full border border-neutral-700/50 bg-neutral-800/20 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-neutral-800/50 sm:px-7 sm:py-3.5"
-                  onClick={() => {
-                    const link = document.createElement('a');
-                    link.href = 'https://resume.iouzzine.me/resume.pdf';
-                    link.download = 'resume.pdf';
-                    link.target = '_blank';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                  }}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  <span className="relative z-10 inline-flex items-center gap-2">
-                    <Download
-                      size={16}
-                      className="transition-transform duration-300 group-hover:-translate-y-0.5"
-                    />
-                    Download Resume
-                  </span>
-                  <span className="from-primary-600/5 absolute inset-0 -z-10 bg-gradient-to-br to-blue-600/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
-                </motion.button>
+                <div className="flex gap-2 sm:gap-3">
+                  <motion.a
+                    href="https://resume.iouzzine.me"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative cursor-pointer overflow-hidden rounded-full border border-neutral-700/50 bg-cyan-900/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-cyan-500/50 hover:bg-cyan-800/20 sm:px-7 sm:py-3.5"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <span className="relative z-10 inline-flex items-center gap-2">
+                      <FileText
+                        size={16}
+                        className="text-cyan-400 transition-transform duration-300 group-hover:rotate-3"
+                      />
+                      View CV
+                    </span>
+                    <span className="absolute inset-0 -z-10 bg-gradient-to-br from-cyan-600/5 to-cyan-400/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+                  </motion.a>
+
+                  <motion.a
+                    href="https://resume.iouzzine.me/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download="iouzzine_resume.pdf"
+                    className="group hover:border-primary-500/50 relative cursor-pointer overflow-hidden rounded-full border border-neutral-700/50 bg-neutral-800/20 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-neutral-800/50 sm:px-7 sm:py-3.5"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <span className="relative z-10 inline-flex items-center gap-2">
+                      <Download
+                        size={16}
+                        className="transition-transform duration-300 group-hover:-translate-y-0.5"
+                      />
+                      Download PDF
+                    </span>
+                    <span className="from-primary-600/5 absolute inset-0 -z-10 bg-gradient-to-br to-blue-600/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+                  </motion.a>
+                </div>
               </motion.div>
             </div>
           </motion.div>

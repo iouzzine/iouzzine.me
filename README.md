@@ -1,76 +1,36 @@
-# Portfolio
+# iouzzine.me — Personal Portfolio
 
-A modern personal portfolio website built with Next.js 15, React 19, and TailwindCSS.
+Personal portfolio of **Ismail Ouzzine**, Full Stack Developer & Solution Architect based in Casablanca, Morocco.
 
-## Features
+**Live:** [iouzzine.me](https://iouzzine.me)
 
-- **Responsive Design**: Optimized for all device sizes
-- **Modern UI**: Clean, professional interface with smooth animations using Framer Motion
-- **Sections**:
-  - About: Personal introduction
-  - Skills: Technical capabilities showcase
-  - Projects: Portfolio of work
-  - Experience: Professional background
-  - Contact: Form for reaching out
+## Tech Stack
 
-## Technologies
+- **Framework:** Next.js 16 (App Router, Server Components)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Forms:** React Hook Form + Zod
+- **Email:** Resend
+- **UI Primitives:** Radix UI / shadcn
 
-- **Frontend**: Next.js 15.3.0, React 19, TypeScript
-- **Styling**: TailwindCSS 4
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Form Processing**: Resend for contact form email delivery
-- **Performance**: Vercel Speed Insights
-
-## Getting Started
-
-First, install the dependencies:
+## Running Locally
 
 ```bash
-npm install
-# or
-yarn install
-# or
 pnpm install
-# or
-bun install
+pnpm dev
 ```
 
-Then, run the development server:
+Open [http://localhost:3000](http://localhost:3000).
+
+## Environment Variables
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env.example .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then fill in the values in `.env`. Get a free API key at [resend.com](https://resend.com).
 
-## Project Structure
+## License
 
-```
-src/
-  app/
-    components/
-      about.tsx       # About section
-      contact.tsx     # Contact form section
-      experience.tsx  # Professional experience section
-      header.tsx      # Page header
-      projects.tsx    # Projects showcase
-      skills.tsx      # Skills display
-    api/
-      send/           # API route for contact form
-    page.tsx          # Main page component
-```
-
-## Deployment
-
-This portfolio is designed to be deployed on Vercel for optimal performance with Next.js.
-
-## Development
-
-This project uses ESLint and Prettier for code quality and formatting. Run `npm run lint` to check for issues.
+Feel free to use this as inspiration for your own portfolio. If you do, a credit or link back is appreciated but not required.

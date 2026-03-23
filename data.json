@@ -130,6 +130,19 @@
       ]
     },
     {
+      "id": "HashPay",
+      "title": "HashPay",
+      "description": "Built a cryptocurrency payment infrastructure platform with an embeddable checkout widget supporting multi-website integration, a merchant management dashboard, analytics, webhook event system, and user role management — enabling businesses to accept and manage crypto payments with fully customizable checkout flows.",
+      "techStack": [
+        { "name": "React", "color": "#38BDF8" },
+        { "name": "TypeScript", "color": "#3B82F6" },
+        { "name": "Vite", "color": "#646CFF" },
+        { "name": "Webpack", "color": "#1C78C0" },
+        { "name": "Tailwind CSS", "color": "#06B6D4" },
+        { "name": "Context API", "color": "#61DAFB" }
+      ]
+    },
+    {
       "id": "Portfolio",
       "title": "Portfolio",
       "description": "Designed and built this portfolio using Next.js 15 with server components, Framer Motion animations, and Tailwind CSS — optimized for performance, accessibility, and SEO with a perfect Lighthouse score.",

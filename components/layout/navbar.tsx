@@ -18,8 +18,13 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
@@ -81,7 +86,8 @@ const Navbar = () => {
             onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
             className="size-9 cursor-pointer"
           >
-            {resolvedTheme === 'dark' ? <Sun className="size-4" /> : <Moon className="size-4" />}
+            {mounted &&
+              (resolvedTheme === 'dark' ? <Sun className="size-4" /> : <Moon className="size-4" />)}
           </Button>
 
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>

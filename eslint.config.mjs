@@ -4,7 +4,7 @@ import nextTs from 'eslint-config-next/typescript';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
-import prettierPluginTailwindcss from 'prettier-plugin-tailwindcss';
+import { parsers as prettierPluginTailwindcss } from 'prettier-plugin-tailwindcss';
 
 const eslintConfig = defineConfig([
   ...nextVitals,

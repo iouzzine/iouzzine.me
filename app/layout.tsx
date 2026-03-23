@@ -54,6 +54,36 @@ const RootLayout = ({
   return (
     <html lang="en" className={cn('font-sans', geist.variable)} suppressHydrationWarning>
       <body className={cn(geistMono.variable, 'bg-background text-foreground antialiased')}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Ismail Ouzzine',
+              url: 'https://iouzzine.me',
+              jobTitle: 'Full Stack Developer & Solution Architect',
+              worksFor: { '@type': 'Organization', name: 'My Company' },
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Casablanca',
+                addressCountry: 'MA',
+              },
+              sameAs: ['https://github.com/iouzzine', 'https://www.linkedin.com/in/ismailouzz/'],
+              knowsAbout: [
+                'React',
+                'Next.js',
+                'Node.js',
+                'TypeScript',
+                'JavaScript',
+                'PostgreSQL',
+                'MongoDB',
+                'Docker',
+                'NestJS',
+              ],
+            }),
+          }}
+        />
         <ThemeProvider>
           <TooltipProvider delayDuration={300}>
             <a

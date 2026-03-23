@@ -20,6 +20,7 @@ interface FormValues {
   name: string;
   email: string;
   message: string;
+  website?: string;
 }
 
 const Contact = ({ personal }: ContactProps) => {
@@ -70,6 +71,14 @@ const Contact = ({ personal }: ContactProps) => {
       <div className="grid items-start gap-12 md:grid-cols-2">
         <AnimateIn delay={0.1}>
           <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
+            <input
+              type="text"
+              autoComplete="off"
+              tabIndex={-1}
+              aria-hidden="true"
+              className="absolute h-0 w-0 overflow-hidden opacity-0"
+              {...register('website')}
+            />
             <div className="space-y-1.5">
               <Label htmlFor="name">Name</Label>
               <Input

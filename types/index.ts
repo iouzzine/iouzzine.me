@@ -47,6 +47,7 @@ export interface Stat {
 export interface AboutInfo {
   summary: string;
   featuredSkills: string[];
+  whatIBuild: string[];
 }
 
 export interface PortfolioData {

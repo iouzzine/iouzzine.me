@@ -39,12 +39,7 @@ const About = ({ about }: AboutProps) => {
                 What I build
               </p>
               <ul className="text-muted-foreground space-y-2 text-sm">
-                {[
-                  'Web applications & SaaS platforms',
-                  'Internal tools, ERPs & dashboards',
-                  'REST & GraphQL APIs',
-                  'Real-time features & event-driven systems',
-                ].map((item) => (
+                {about.whatIBuild.map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-current opacity-50" />
                     {item}

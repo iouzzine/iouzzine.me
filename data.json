@@ -18,7 +18,13 @@
   ],
   "about": {
     "summary": "I'm Ismail Ouzzine, a Full Stack Developer with 6+ years of experience delivering 30+ impactful projects across diverse industries. Specializing in React, Next.js, Node.js, and TypeScript, I transform complex challenges into intuitive digital experiences that drive business growth.",
-    "featuredSkills": ["TypeScript", "React", "Next.js", "Node.js"]
+    "featuredSkills": ["TypeScript", "React", "Next.js", "Node.js"],
+    "whatIBuild": [
+      "Web applications & SaaS platforms",
+      "Internal tools, ERPs & dashboards",
+      "REST & GraphQL APIs",
+      "Real-time features & event-driven systems"
+    ]
   },
   "skills": [
     {
@@ -145,7 +151,7 @@
     {
       "id": "Portfolio",
       "title": "Portfolio",
-      "description": "Designed and built this portfolio using Next.js 15 with server components, Framer Motion animations, and Tailwind CSS — optimized for performance, accessibility, and SEO with a perfect Lighthouse score.",
+      "description": "Designed and built this portfolio using Next.js 16 with server components, Framer Motion animations, and Tailwind CSS — optimized for performance, accessibility, and SEO with a perfect Lighthouse score.",
       "techStack": [
         { "name": "TypeScript", "color": "#3B82F6" },
         { "name": "React", "color": "#38BDF8" },

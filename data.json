@@ -149,6 +149,21 @@
       ]
     },
     {
+      "id": "NodeForgeApi",
+      "title": "node-forge-api",
+      "description": "Open-source production-ready backend starter built with Node.js, Express, and TypeScript. Features a BaseService/BaseRepository architecture pattern for rapid feature development, TypeORM with PostgreSQL, Redis sessions, JWT auth, email service, Docker setup with healthchecks, CI/CD workflows, and Zod environment validation — forge your API from a solid foundation.",
+      "techStack": [
+        { "name": "TypeScript", "color": "#3B82F6" },
+        { "name": "Node.js", "color": "#22C55E" },
+        { "name": "Express", "color": "#9CA3AF" },
+        { "name": "TypeORM", "color": "#FB923C" },
+        { "name": "PostgreSQL", "color": "#60A5FA" },
+        { "name": "Redis", "color": "#EF4444" },
+        { "name": "Docker", "color": "#38BDF8" }
+      ],
+      "githubUrl": "https://github.com/iouzzine/node-forge-api"
+    },
+    {
       "id": "Portfolio",
       "title": "Portfolio",
       "description": "Designed and built this portfolio using Next.js 16 with server components, Framer Motion animations, and Tailwind CSS — optimized for performance, accessibility, and SEO with a perfect Lighthouse score.",

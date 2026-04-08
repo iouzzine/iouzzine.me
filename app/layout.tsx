@@ -17,13 +17,12 @@ export const metadata: Metadata = {
     template: '%s | iouzzine',
   },
   description:
-    'Full Stack Developer & Solution Architect based in Casablanca with 6+ years building impactful products with React, Next.js, Node.js, and TypeScript.',
+    'Full Stack Developer based in Casablanca with 6+ years building impactful products with React, Next.js, Node.js, and TypeScript.',
   keywords: [
     'Next.js',
     'TypeScript',
     'React',
     'Full Stack Developer',
-    'Solution Architect',
     'Casablanca',
     'Morocco',
     'Node.js',
@@ -35,13 +34,13 @@ export const metadata: Metadata = {
     url: 'https://iouzzine.me',
     title: 'Ismail Ouzzine — Full Stack Developer',
     description:
-      'Full Stack Developer & Solution Architect based in Casablanca with 6+ years building impactful products.',
+      'Full Stack Developer based in Casablanca with 6+ years building impactful products.',
   },
   twitter: {
     card: 'summary_large_image',
     creator: '@iouzzine',
     title: 'Ismail Ouzzine — Full Stack Developer',
-    description: 'Full Stack Developer & Solution Architect based in Casablanca.',
+    description: 'Full Stack Developer based in Casablanca.',
   },
   robots: { index: true, follow: true },
 };
@@ -62,7 +61,7 @@ const RootLayout = ({
               '@type': 'Person',
               name: 'Ismail Ouzzine',
               url: 'https://iouzzine.me',
-              jobTitle: 'Full Stack Developer & Solution Architect',
+              jobTitle: 'Full Stack Developer',
               worksFor: { '@type': 'Organization', name: 'My Company' },
               address: {
                 '@type': 'PostalAddress',

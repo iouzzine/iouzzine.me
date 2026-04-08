@@ -1,6 +1,6 @@
 # iouzzine.me
 
-Personal portfolio of **Ismail Ouzzine** — Full Stack Developer & Solution Architect based in Casablanca, Morocco.
+Personal portfolio of **Ismail Ouzzine** — Full Stack Developer based in Casablanca, Morocco.
 
 [![Live](https://img.shields.io/badge/live-iouzzine.me-blue?style=flat-square)](https://iouzzine.me)
 

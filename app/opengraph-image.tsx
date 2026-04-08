@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Ismail Ouzzine — Full Stack Developer & Solution Architect';
+export const alt = 'Ismail Ouzzine — Full Stack Developer';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -89,7 +89,7 @@ export default function OGImage() {
           fontWeight: 400,
         }}
       >
-        Full Stack Developer &amp; Solution Architect
+        Full Stack Developer
       </p>
 
       {/* Stats row */}

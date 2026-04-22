@@ -137,8 +137,8 @@ export const Experience = () => (
               {/* Content */}
               <motion.div
                 whileHover={{
-                  borderColor: `${item.color}40`,
-                  backgroundColor: `${item.color}06`,
+                  borderColor: `${item.colorHex}40`,
+                  backgroundColor: `${item.colorHex}06`,
                 }}
                 transition={{ duration: 0.2 }}
                 style={{

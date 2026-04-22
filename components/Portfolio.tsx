@@ -20,8 +20,8 @@ interface Tweaks {
 }
 
 const TWEAK_DEFAULTS: Tweaks = {
-  accentColor: '#3b82f6',
-  secondaryColor: '#ffffff',
+  accentColor: '#818CF8',
+  secondaryColor: '#34D399',
   bgColor: '#06060a',
   showParticles: true,
   fontScale: 1,

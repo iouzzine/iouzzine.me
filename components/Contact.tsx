@@ -8,7 +8,7 @@ import { fadeUp, stagger } from "@/lib/motion";
 type Status = "idle" | "sending" | "sent" | "error";
 
 export const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "", website: "" });
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -24,6 +24,7 @@ export const Contact = () => {
           name: form.name,
           email: form.email,
           message: form.message,
+          website: form.website,
         }),
       });
       const data = await res.json();
@@ -153,6 +154,8 @@ export const Contact = () => {
               name="website"
               tabIndex={-1}
               autoComplete="off"
+              value={form.website}
+              onChange={(e) => setForm({ ...form, website: e.target.value })}
               style={{
                 position: "absolute",
                 left: "-9999px",

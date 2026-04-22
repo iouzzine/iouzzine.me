@@ -145,7 +145,7 @@ export const projects = [
     color: "#a78bfa", colorHex: "#a78bfa",
   },
   {
-    id: "M-003",
+    id: "M-002",
     name: "HashPay",
     tag: "Fintech · Web3",
     stack: ["React", "TypeScript", "Vite", "Webpack"],

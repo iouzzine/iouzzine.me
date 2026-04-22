@@ -17,9 +17,51 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ismail Ouzzine — Full Stack Developer",
+  metadataBase: new URL("https://iouzzine.me"),
+  title: {
+    default: "Ismail Ouzzine — Full Stack Developer",
+    template: "%s | Ismail Ouzzine",
+  },
   description:
     "Full Stack Developer based in Casablanca. React, Next.js, Node.js, TypeScript — 6+ years, 30+ projects, 15+ clients.",
+  keywords: [
+    "Full Stack Developer",
+    "React",
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+    "Casablanca",
+    "Morocco",
+    "Ismail Ouzzine",
+  ],
+  authors: [{ name: "Ismail Ouzzine", url: "https://iouzzine.me" }],
+  creator: "Ismail Ouzzine",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://iouzzine.me",
+    siteName: "Ismail Ouzzine",
+    title: "Ismail Ouzzine — Full Stack Developer",
+    description:
+      "Full Stack Developer based in Casablanca. React, Next.js, Node.js, TypeScript — 6+ years, 30+ projects, 15+ clients.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ismail Ouzzine — Full Stack Developer",
+    description:
+      "Full Stack Developer based in Casablanca. React, Next.js, Node.js, TypeScript — 6+ years, 30+ projects, 15+ clients.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

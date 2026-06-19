@@ -112,6 +112,33 @@ export const about = {
 export const projects = [
   {
     id: "M-001",
+    name: "Mizani",
+    tag: "Personal Finance · SaaS",
+    stack: [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "TypeORM",
+      "Tailwind CSS",
+    ],
+    challenge:
+      "Tracking personal finances across income, expenses, budgets, and recurring transactions was fragmented across spreadsheets with no real-time visibility, no alerting, and no way to interact from a phone.",
+    solution:
+      "Built a full-stack personal finance app with a React SPA and Express/TypeORM API. Features include budgets with spend tracking, recurring transactions with catch-up logic, SSE real-time notifications, and a Telegram bot for adding transactions, querying balances, and searching by keyword — all scoped to a configurable month start day.",
+    results: [
+      "Full budget lifecycle: creation, spend tracking, 70% threshold alerts",
+      "Recurring transactions with daily catch-up cron across all missed periods",
+      "AI throughout: NL transaction parsing, category suggestion, emoji/color auto-generation, monthly narrative, weekly insights, template pattern detection & recurrence pattern detection from spending history",
+      "SSE real-time in-app notifications + Telegram monthly summary push",
+    ],
+    color: "#6366f1",
+    colorHex: "#6366f1",
+  },
+  {
+    id: "M-002",
     name: "ModaERP",
     tag: "ERP · Fashion Retail",
     stack: ["TypeScript", "Node.js", "React", "PostgreSQL", "Prisma"],
@@ -125,7 +152,8 @@ export const projects = [
       "200+ monthly clients managed",
       "Operational errors eliminated through automated workflows",
     ],
-    color: "var(--cyan)", colorHex: "#818CF8",
+    color: "var(--cyan)",
+    colorHex: "#818CF8",
   },
   {
     id: "M-003",
@@ -142,10 +170,11 @@ export const projects = [
       "Proactive performance monitoring before issues reach users",
       "Zero context-switch — embedded inside ModaERP",
     ],
-    color: "#a78bfa", colorHex: "#a78bfa",
+    color: "#a78bfa",
+    colorHex: "#a78bfa",
   },
   {
-    id: "M-002",
+    id: "M-004",
     name: "HashPay",
     tag: "Fintech · Web3",
     stack: ["React", "TypeScript", "Vite", "Webpack"],
@@ -159,11 +188,12 @@ export const projects = [
       "Webhook event system for payment lifecycle",
       "Fully customizable checkout flows per merchant",
     ],
-    color: "oklch(0.75 0.18 30)", colorHex: "#e8922a",
+    color: "oklch(0.75 0.18 30)",
+    colorHex: "#e8922a",
   },
 
   {
-    id: "M-004",
+    id: "M-005",
     name: "LunchPro",
     tag: "B2C · Food Delivery",
     stack: ["TypeScript", "React", "Tailwind CSS", "Firebase", "Firestore"],
@@ -177,10 +207,11 @@ export const projects = [
       "Seamless daily lunch ordering for corporate teams",
       "Live order status from placement to delivery",
     ],
-    color: "#fb923c", colorHex: "#fb923c",
+    color: "#fb923c",
+    colorHex: "#fb923c",
   },
   {
-    id: "M-005",
+    id: "M-006",
     name: "LunchPro · Dispatch",
     tag: "Logistics · Real-time Ops",
     stack: ["TypeScript", "React", "Tailwind CSS", "Firebase", "Firestore"],
@@ -194,10 +225,11 @@ export const projects = [
       "SLA alerts eliminate missed delivery windows",
       "Full operational visibility from order to door",
     ],
-    color: "#38bdf8", colorHex: "#38bdf8",
+    color: "#38bdf8",
+    colorHex: "#38bdf8",
   },
   {
-    id: "M-006",
+    id: "M-007",
     name: "MFlow",
     tag: "ERP · SMB",
     stack: [
@@ -218,10 +250,11 @@ export const projects = [
       "Biometric attendance tracking integration",
       "Eliminated 4+ separate tools per business",
     ],
-    color: "#e879f9", colorHex: "#e879f9",
+    color: "#e879f9",
+    colorHex: "#e879f9",
   },
   {
-    id: "M-007",
+    id: "M-008",
     name: "node-forge-api",
     tag: "Backend Starter",
     stack: [
@@ -243,10 +276,11 @@ export const projects = [
       "Full auth stack: JWT, Redis sessions, email service",
       "Docker healthchecks + CI/CD workflows included",
     ],
-    color: "#4ade80", colorHex: "#4ade80",
+    color: "#4ade80",
+    colorHex: "#4ade80",
   },
   {
-    id: "M-008",
+    id: "M-009",
     name: "Portfolio",
     tag: "Portfolio · Next.js",
     githubUrl: "https://github.com/iouzzine/iouzzine.me",
@@ -261,7 +295,8 @@ export const projects = [
       "Framer Motion scroll and entrance animations",
       "Full SEO with structured metadata and sitemap",
     ],
-    color: "#f472b6", colorHex: "#f472b6",
+    color: "#f472b6",
+    colorHex: "#f472b6",
   },
 ];
 
@@ -269,12 +304,14 @@ export const skills = {
   categories: [
     {
       label: "Frontend",
-      color: "var(--cyan)", colorHex: "#818CF8",
+      color: "var(--cyan)",
+      colorHex: "#818CF8",
       items: ["React / Next.js", "TypeScript", "CSS / Tailwind", "Electron"],
     },
     {
       label: "Backend",
-      color: "var(--violet)", colorHex: "#34D399",
+      color: "var(--violet)",
+      colorHex: "#34D399",
       items: [
         "Node.js / NestJS",
         "PHP / Laravel / Symfony",
@@ -284,7 +321,8 @@ export const skills = {
     },
     {
       label: "Database",
-      color: "#a78bfa", colorHex: "#a78bfa",
+      color: "#a78bfa",
+      colorHex: "#a78bfa",
       items: [
         "PostgreSQL / MySQL",
         "MongoDB / Firestore",
@@ -294,7 +332,8 @@ export const skills = {
     },
     {
       label: "DevOps & Tools",
-      color: "oklch(0.75 0.18 30)", colorHex: "#e8922a",
+      color: "oklch(0.75 0.18 30)",
+      colorHex: "#e8922a",
       items: [
         "Git / CI/CD",
         "Docker / Unix",
@@ -333,7 +372,8 @@ export const experience = [
       "Electron",
       "TypeScript",
     ],
-    color: "var(--cyan)", colorHex: "#818CF8",
+    color: "var(--cyan)",
+    colorHex: "#818CF8",
   },
   {
     year: "2020 — 2023",
@@ -362,7 +402,8 @@ export const experience = [
       "PostgreSQL",
       "MongoDB",
     ],
-    color: "var(--violet)", colorHex: "#34D399",
+    color: "var(--violet)",
+    colorHex: "#34D399",
   },
   {
     year: "Feb — Jul 2020",
@@ -381,7 +422,8 @@ export const experience = [
       "Eliminated overnight stock discrepancies",
     ],
     skills: ["HTML", "CSS", "JavaScript", "Firebase", "Firestore"],
-    color: "oklch(0.75 0.18 30)", colorHex: "#e8922a",
+    color: "oklch(0.75 0.18 30)",
+    colorHex: "#e8922a",
   },
   {
     year: "Nov 2019 — Jan 2020",
@@ -408,7 +450,8 @@ export const experience = [
       "Node.js",
       "MongoDB",
     ],
-    color: "var(--muted)", colorHex: "#6b6b8a",
+    color: "var(--muted)",
+    colorHex: "#6b6b8a",
   },
 ];
 
